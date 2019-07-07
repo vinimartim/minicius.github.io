@@ -9,26 +9,23 @@ baseurl: ""
 url: 
 show_excerpts: true # set to true to show excerpts on the homepage
 
-
-
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
   sass_dir: _sass
 plainwhite:
-  name: Adam Denisov
+  name: Vinicius Lisboa
   tagline: Developer. Designer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
+    twitter: zadravsk
+    github:  vinimartim
     rss: rss
     # dribbble: jekyll
-    # facebook: jekyll
+    facebook: vinimartim
     # flickr:   jekyll
     # instagram: jekyll
     # linkedin: jekyll
@@ -58,3 +55,5 @@ theme: plainwhite
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
+
+permalink: /:year/post/:title

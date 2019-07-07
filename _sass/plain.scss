@@ -12,6 +12,10 @@ $leftWidth: 220px;
 	box-sizing: border-box;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
@@ -40,7 +44,7 @@ h2 {
 
 header {
 	.topbar {
-		height: 44px;
+		height: 54px;
 		width: 100%;
 		position: fixed;
 		background-color: rgb(255, 255, 255);
@@ -64,14 +68,17 @@ header {
 
 	.brand {
 		float: left;
-		margin-left: 57px;
+		margin-left: 53px;
 		@media (max-width: 986px){
 			margin-left: 0;
+			line-height: 1.7;
 		}
 	}
 
 	.btn-sidebar {
 		display: none;
+		background-color: transparent;
+		border: none;
 		@media (max-width: 986px){
 			display: block;
 			margin-left: auto !important;
@@ -82,9 +89,14 @@ header {
 	.topbar-links {
 		float: right;
 		display: block;
+		margin-right: 30px;
 		@media (max-width: 986px){
 			display: none;
 		}
+	}
+
+	.topbar-link {
+		padding-left: 7px;
 	}
 
 }
@@ -115,7 +127,7 @@ main {
 
 	.content {
 		max-width: calc(100% - #{$leftWidth});
-		margin-top: 44px;
+		margin-top: 54px;
 		margin-left: $leftWidth;
 
 		@media (max-width: 986px){
@@ -132,11 +144,11 @@ main {
 	.about {
 		display: flex;
 		height: 100vh;
-		padding-bottom: 15vh;
+		padding-bottom: 5vh;
 		position: fixed;
 		background-color: white;
 		transition: ease-out 300ms;
-		margin-top: 44px;
+		margin-top: 54px;
 		@media (max-width: 986px){
 			left: -300px;
 			width: 300px;
@@ -165,6 +177,24 @@ main {
 		img {
 			max-width: 150px;
 		}
+
+		.sidebar-links{
+			display: none;
+
+			@media (max-width: 986px) {
+				display: block;
+				list-style-type: none;
+				margin: 0;
+			}
+		}
+
+		.site-content {
+			margin: 45px 30px;
+			@media (max-width: 986px){
+				margin-left: 20px;
+				margin-right: 20px;
+			} 
+		}
 	}
 
 	.btn-close {
@@ -180,6 +210,43 @@ main {
 			margin-right: 10px;
 		}
 	}
+}
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(/assets/font/MaterialIcons-Regular.eot); /* For IE6-8 */
+	src: local('Material Icons'),
+	  local('MaterialIcons-Regular'),
+	  url(/assets/font/MaterialIcons-Regular.woff2) format('woff2'),
+	  url(/assets/font/MaterialIcons-Regular.woff) format('woff'),
+	  url(/assets/font/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+  
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+  
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+  
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 }
 
 .social {

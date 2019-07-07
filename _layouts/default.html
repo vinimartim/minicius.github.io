@@ -7,30 +7,41 @@
 	<header>
 		<nav id="topbar" class="topbar">
 			<div class="topbar-inner">
-				<div class="brand">Minimalist</div>
-				<button type="button" onclick="mostraSidebar()" class="btn-sidebar">| | |</button>
+				<div class="brand"><a href="/">Minimalist</a></div>
+				<button type="button" onclick="mostraSidebar()" class="btn-sidebar">
+					<i class="material-icons">menu</i>
+				</button>
 				
 				<div class="topbar-links">
-					<a href="#">Link 1</a>
-					<a href="#">Link 2</a>
-					<a href="#">Link 3</a>
-					<a href="#">Link 4</a>
-					<a href="#">Link 5</a>
+					<a href="#" class="topbar-link">Home</a>
+					<a href="#" class="topbar-link">Sobre mim</a>
+					<a href="#" class="topbar-link">Blog</a>
+					<a href="#" class="topbar-link">Contato</a>
 				</div>
 			</div>
 		</nav>
 	</header>
 	<main class="container">
 		<section class="about" id="about">
-			<button type="button" onclick="fecharNavbar()" class="btn-close"> X </button>
-			<img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+			<button type="button" onclick="fecharNavbar()" class="btn-close">
+					<i class="material-icons">close</i>
+			</button>
+			<img src="{{ "/assets/mr.png" | relative_url }}" alt="{{ site.plainwhite.name }}" style="border-radius: 50%/50%">
 			<h2>{{ site.plainwhite.name }}</h2>
 			<p class="tagline">{{ site.plainwhite.tagline }}</p>
 			<ul class="social">
 				<a href="https://github.com/{{ site.plainwhite.social_links.github }}"><li><i class="icon-github-circled"></i></li></a>
-				<a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}"><li><i class="icon-linkedin-squared"></i></li></a>
+				<a href="https://www.facebook.com/{{ site.plainwhite.social_links.facebook }}"><li><i class="icon-facebook-circled"></i></li></a>
 				<a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}"><li><i class="icon-twitter-squared"></i></li></a>
 			</ul>
+
+			<ul class="sidebar-links">
+				<li><a href="#" class="topbar-link">Home</a></li>
+				<li><a href="#" class="topbar-link">Sobre mim</a></li>
+				<li><a href="#" class="topbar-link">Blog</a></li>
+				<li><a href="#" class="topbar-link">Contato</a></li>
+			</ul>
+
 			<p>&copy; 2019</p>
 		</section>
 		<section class="content">
