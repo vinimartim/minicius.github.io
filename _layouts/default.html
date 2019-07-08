@@ -35,9 +35,11 @@
 			<button type="button" onclick="fecharNavbar()" class="btn-close">
 					<i class="material-icons">close</i>
 			</button>
-			<img class="about-img" src="{{ "/assets/mr.png" | relative_url }}" alt="{{ site.plainwhite.name }}" style="border-radius: 50%/50%">
+
+			<img class="about-img" id="about-img" src="{{ "/assets/mr.png" | relative_url }}" alt="{{ site.plainwhite.name }}" style="border-radius: 50%/50%">
 			<h2>{{ site.plainwhite.name }}</h2>
 			<p class="tagline">{{ site.plainwhite.tagline }}</p>
+
 			<ul class="social">
 				<a href="https://github.com/{{ site.plainwhite.social_links.github }}"><li><i class="icon-github-circled"></i></li></a>
 				<a href="https://www.facebook.com/{{ site.plainwhite.social_links.facebook }}"><li><i class="icon-facebook-circled"></i></li></a>
@@ -49,7 +51,6 @@
 				<li><a href="#" class="topbar-link">Home</a></li>
 				<li><a href="#" class="topbar-link">Sobre mim</a></li>
 				<li><a href="#" class="topbar-link">Blog</a></li>
-				<li><a href="#" class="topbar-link">Contato</a></li>
 			</ul>
 		
 

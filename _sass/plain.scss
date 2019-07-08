@@ -213,18 +213,30 @@ main {
 
 		.about-img {
 			max-width: 150px;
+			display: block;
 			@media (max-width: 986px) {
 				max-width: 100px;
 			}
 		}
 
+		.img-landsc {
+			display: none;
+		}
+
 		.sidebar-links{
 			display: none;
 			padding-inline-start: 0px;
+			
 			@media (max-width: 986px) {
-				display: block;
+				display: flex;
 				list-style-type: none;
 				margin: 0;
+			}
+			a {
+				padding-left: 5px;
+				&:hover {
+					color: $linkColor;
+				}
 			}
 		}
 
@@ -267,6 +279,10 @@ main {
 				display: block;
 			}
 		}
+
+		.container-about {
+	
+		}
 	}
 
 	.btn-close {
@@ -286,11 +302,11 @@ main {
 }
 
 .container {
-	@media (min-width: 768px) {
+	@media (max-width: 768px) {
 		max-width: 100%;
 	}
 
-	@media (min-width: 576px) {
+	@media (max-width: 576px) {
     	max-width: 100%;
 	}
 }
