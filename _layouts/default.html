@@ -87,7 +87,7 @@
 			sidebar.classList.remove('mostra-sidebar');
 		}
 
-		window.addEventListener('mouseup', function(event){
+		window.addEventListener('touchstart', function(event){
 			if(event.target != sidebar && event.target.parentNode != sidebar) {
 				fecharNavbar();
 			}
