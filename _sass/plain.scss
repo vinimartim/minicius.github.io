@@ -101,10 +101,10 @@ header {
 		margin:0;
 		float: right;
 		transition: width .5s ease-out;
-		width: 100px;
-		border: 1px solid lightgray;
+		width: 5px;
+		border:none;
 		outline: none;
-		padding-left: 10px;
+		background-color: #c70039;
 		padding-right: 10px;
 		background: url(/assets/images/baseline_search_black_18dp.png) no-repeat scroll 7px 4px;
 		padding-left: 30px;
@@ -112,6 +112,7 @@ header {
 		display: block;
 		&:focus {
 			width: 300px;
+			border: 1px solid #c70039;
 		}
 		@media (max-width: 986px){
 			display: none;
@@ -124,6 +125,7 @@ header {
 		display: block;
 		margin-right: 30px;
 		margin-left: 20px;
+		text-transform: lowercase;	
 		@media (max-width: 986px){
 			display: none;
 		}
@@ -162,13 +164,12 @@ main {
 
 	.content {
 		max-width: calc(100% - #{$leftWidth});
-		margin-top: 54px;
+		margin-top: 74px;
 		margin-left: 280px;;
 
 		@media (max-width: 986px){
 			max-width: 100%;	
 			margin-left: 0;
-			margin-top: 74px;
 		}
 	}
 
