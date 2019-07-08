@@ -28,10 +28,14 @@
 	</header>
 	<main class="container">
 		<section class="about" id="about">
+			<form class="search-form mt-1 mb-1">
+				<input class="search" type="text">
+			</form>
+
 			<button type="button" onclick="fecharNavbar()" class="btn-close">
 					<i class="material-icons">close</i>
 			</button>
-			<img src="{{ "/assets/mr.png" | relative_url }}" alt="{{ site.plainwhite.name }}" style="border-radius: 50%/50%">
+			<img class="about-img" src="{{ "/assets/mr.png" | relative_url }}" alt="{{ site.plainwhite.name }}" style="border-radius: 50%/50%">
 			<h2>{{ site.plainwhite.name }}</h2>
 			<p class="tagline">{{ site.plainwhite.tagline }}</p>
 			<ul class="social">
@@ -47,10 +51,7 @@
 				<li><a href="#" class="topbar-link">Blog</a></li>
 				<li><a href="#" class="topbar-link">Contato</a></li>
 			</ul>
-			
-			<form class="search-form mt-1 mb-1">
-				<input class="search" type="text">
-			</form>
+		
 
 			<p>&copy; 2019</p>
 		</section>
@@ -75,12 +76,22 @@
 		let sidebar = document.getElementById('about');
 
 		function mostraSidebar() {
-			sidebar.classList.add('mostra-sidebar');
+			if(sidebar.classList.contains('mostra-sidebar')) {
+				fecharNavbar();
+			} else {
+				sidebar.classList.add('mostra-sidebar');
+			}
 		}
 
 		function fecharNavbar() {
 			sidebar.classList.remove('mostra-sidebar');
 		}
+
+		window.addEventListener('mouseup', function(event){
+			if(event.target != sidebar) {
+				fecharNavbar();
+			}
+		});
 
 	</script>
 
