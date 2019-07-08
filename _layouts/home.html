@@ -30,7 +30,8 @@ layout: default
 			{{ post.excerpt }}
 			{%- endif -%}
 		</div>
-		<a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Continuar lendo</a>
+		<a class="read-more" href="{{ post.url | prepend: site.baseurl }}">
+			<i class="material-icons" style="vertical-align: middle">keyboard_arrow_right</i>Continuar lendo</a>
 		</div>
 		{%- endfor -%}
 		</div>

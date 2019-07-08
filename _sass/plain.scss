@@ -2,7 +2,7 @@
 @import 'ext/normalize';
 @import 'syntax';
 
-$linkColor: #0A59B0;
+$linkColor: #C70039;
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
@@ -13,13 +13,16 @@ $leftWidth: 220px;
 }
 
 html {
-    overflow-y: scroll;
+	overflow-y: scroll;
+	height: 100%;
 }
 
 body {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Prompt', sans-serif;;
+	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.2em;
+	height: 100%;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -30,10 +33,12 @@ img, embed, object, video {
 }
 
 a {
-	text-decoration: none;
 	color: #000;
-	transition: color 0.3s;
+	transition: color 0.2s;
+	text-decoration: none;
+	font-weight: 500;
 	&:hover {
+		text-decoration: none;
 		color: $linkColor;
 	}
 }
@@ -69,6 +74,10 @@ header {
 	.brand {
 		float: left;
 		margin-left: 53px;
+		color: #c70039;
+		a {
+			vertical-align: -webkit-baseline-middle;
+		}
 		@media (max-width: 986px){
 			margin-left: 0;
 			line-height: 1.7;
@@ -120,10 +129,9 @@ header {
 	}
 
 	.topbar-link {
+		vertical-align: -webkit-baseline-middle;
 		padding-left: 7px;
 	}
-
-
 
 }
 
@@ -154,7 +162,7 @@ main {
 	.content {
 		max-width: calc(100% - #{$leftWidth});
 		margin-top: 54px;
-		margin-left: $leftWidth;
+		margin-left: 280px;;
 
 		@media (max-width: 986px){
 			max-width: 100%;	
@@ -176,8 +184,8 @@ main {
 		transition: ease-out 300ms;
 		margin-top: 54px;
 		@media (max-width: 986px){
-			left: -300px;
-			width: 300px;
+			left: -100%;
+			width: 100%;
 			box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 			border-right: 1px solid #ebebeb;
 			z-index: 1000;
@@ -233,6 +241,7 @@ main {
 				margin: 0;
 			}
 			a {
+				text-decoration: none;
 				padding-left: 5px;
 				&:hover {
 					color: $linkColor;
@@ -335,6 +344,8 @@ main {
 	word-wrap: normal;
 	white-space: nowrap;
 	direction: ltr;
+	transition: 0.1s;
+
   
 	/* Support for all WebKit browsers. */
 	-webkit-font-smoothing: antialiased;
@@ -384,6 +395,12 @@ main {
 .read-more {
 	float: right;
 	text-transform: uppercase;
+	&:hover {
+		i {
+			color: #c10039;
+			transform: rotate(90deg);
+		}
+	}
 }
 
 .post-date {
@@ -425,14 +442,13 @@ main {
 	padding-left: 40px;
 }
 .post {
-	font-family: 'Merriweather', sans-serif;
-	font-weight: 300;
+	font-family: 'Prompt', sans-serif;
 	color: #222;
 	line-height: 1.9em;
 	a {
 		color: $linkColor;
 		text-decoration: none;
-		transition: border-bottom 0.4s;
+		transition: border-bottom 0.1s;
 		&:hover {
 			border-bottom: 0.5px solid $linkColor;
 		}

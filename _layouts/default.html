@@ -7,7 +7,9 @@
 	<header>
 		<nav id="topbar" class="topbar">
 			<div class="topbar-inner">
-				<div class="brand"><a href="/">Minimalist</a></div>
+				<div class="brand"><a href="/" style="color: #c70039"><i class="material-icons" style="vertical-align: middle;">
+						developer_mode
+						</i> Minimalist</a></div>
 				<button type="button" onclick="mostraSidebar()" class="btn-sidebar">
 					<i class="material-icons">menu</i>
 				</button>
@@ -37,13 +39,13 @@
 			</button>
 
 			<img class="about-img" id="about-img" src="{{ "/assets/mr.png" | relative_url }}" alt="{{ site.plainwhite.name }}" style="border-radius: 50%/50%">
-			<h2>{{ site.plainwhite.name }}</h2>
+			<h2 style="color: #c70039">{{ site.plainwhite.name }}</h2>
 			<p class="tagline">{{ site.plainwhite.tagline }}</p>
 
-			<ul class="social">
-				<a href="https://github.com/{{ site.plainwhite.social_links.github }}"><li><i class="icon-github-circled"></i></li></a>
-				<a href="https://www.facebook.com/{{ site.plainwhite.social_links.facebook }}"><li><i class="icon-facebook-circled"></i></li></a>
-				<a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}"><li><i class="icon-twitter-squared"></i></li></a>
+			<ul class="social" >
+				<a href="https://github.com/{{ site.plainwhite.social_links.github }}" style="color: #c70039"><li><i class="icon-github-circled"></i></li></a>
+				<a href="https://www.facebook.com/{{ site.plainwhite.social_links.facebook }}" style="color: #c70039"><li><i class="icon-facebook-circled"></i></li></a>
+				<a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}" style="color: #c70039"><li><i class="icon-twitter-squared"></i></li></a>
 			</ul>
 
 			
