@@ -17,9 +17,9 @@
       searchResults.innerHTML = appendString;
     } else {
       searchResults.innerHTML = `
-        <div class="text-center">
-          <img src="/assets/posts.svg" style="width: 30%">
-          <p class="mt-3" style="opacity: 0.5">Nada foi encontrado</p>
+        <div class="text-center p-5">
+          <img src="/assets/posts.svg" style="width: 20%">
+          <p class="mt-3" style="opacity: 0.5; font-weight: 500">Nada foi encontrado</p>
         </div>
         `;
     }
