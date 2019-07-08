@@ -19,8 +19,8 @@
 					<a href="#" class="topbar-link">Contato</a>
 				</div>
 
-				<form class="search-form">
-					<input class="search" type="text">
+				<form class="search-form" action="/search.html" method="get">
+					<input class="search search-box" type="text" name="query">
 				</form>
 
 			</div>
@@ -28,8 +28,8 @@
 	</header>
 	<main class="container">
 		<section class="about" id="about">
-			<form class="search-form mt-1 mb-1" id="search">
-				<input class="search" type="text">
+			<form class="search-form mt-1 mb-1" id="search" action="/search.html" method="get">
+				<input type="text" class="search search-box"  name="query">
 			</form>
 
 			<button type="button" onclick="fecharNavbar()" class="btn-close">
@@ -48,6 +48,7 @@
 
 			
 			<ul class="sidebar-links">
+				<li><a href="#" class="topbar-link"><i class="material-icons">search</i></a></li>
 				<li><a href="#" class="topbar-link">Home</a></li>
 				<li><a href="#" class="topbar-link">Sobre mim</a></li>
 				<li><a href="#" class="topbar-link">Blog</a></li>
