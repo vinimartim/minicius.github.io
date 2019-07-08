@@ -57,4 +57,4 @@ plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
 
-permalink: /:year/post/:title
+permalink: /blog/:year/post/:title
