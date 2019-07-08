@@ -88,7 +88,7 @@
 		}
 
 		window.addEventListener('mouseup', function(event){
-			if(event.target != sidebar) {
+			if(event.target != sidebar && event.target.parentNode != sidebar) {
 				fecharNavbar();
 			}
 		});
