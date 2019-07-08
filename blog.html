@@ -2,15 +2,18 @@
 layout: page
 title: Posts
 permalink: /blog/
+
 ---
 
 
 {%- if site.posts.size > 0 -%}
-<ul class="posts">
+<div class="posts">
 	<h1 id="posts-label">posts</h1>
+	
+	<div class="row">
 	{%- for post in site.posts -%}
+		<div class="col-sm-6 col-md-6 col-lg-6">
 
-	<li>
 		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 		<a class="post-link" href="{{ post.url | relative_url }}">
 			<h2 class="post-title">{{ post.title | escape }}</h2>
@@ -23,15 +26,21 @@ permalink: /blog/
 			</ul>
 			<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
 		</div>
+
+		<!--img class="post-img" src="{{ site.baseurl }}/assets/images/{{ post.image }}"-->
+
 		<div class="post">
 			{%- if site.show_excerpts -%}
 			{{ post.excerpt }}
 			{%- endif -%}
 		</div>
-	</li>
-	{%- endfor -%}
-</ul>
+		<a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Continuar lendo</a>
+		</div>
+		{%- endfor -%}
+		</div>
+</div>
 {%- else -%} 
+
 <div class="posts" style="text-align: center">
 	<img src="{{ "/assets/posts.svg " | relative_url }}" style="width: 30%">
 	<p style="opacity: 0.5">Não há nenhum post publicado ainda</p>
