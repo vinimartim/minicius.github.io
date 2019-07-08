@@ -28,7 +28,7 @@
 	</header>
 	<main class="container">
 		<section class="about" id="about">
-			<form class="search-form mt-1 mb-1">
+			<form class="search-form mt-1 mb-1" id="search">
 				<input class="search" type="text">
 			</form>
 
@@ -87,8 +87,9 @@
 			sidebar.classList.remove('mostra-sidebar');
 		}
 
+		let search = document.getElementById('search');
 		window.addEventListener('touchstart', function(event){
-			if(event.target != sidebar && event.target.parentNode != sidebar) {
+			if(event.target != sidebar && event.target.parentNode != sidebar && event.target.parentNode != search) {
 				fecharNavbar();
 			}
 		});
