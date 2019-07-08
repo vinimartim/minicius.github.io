@@ -31,6 +31,11 @@ permalink: /blog/
 	</li>
 	{%- endfor -%}
 </ul>
+{%- else -%} 
+<div class="posts" style="text-align: center">
+	<img src="{{ "/assets/posts.svg " | relative_url }}" style="width: 30%">
+	<p style="opacity: 0.5">Não há nenhum post publicado ainda</p>
+</div>
 
  <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
 		<use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
